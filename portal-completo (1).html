@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440">
+<title>Portal UNAB · Todas las páginas</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== Estilos compartidos ===== */
+/* Estilos compartidos · Portal UNAB (páginas de escritorio 1440 × 1024) */
+*{box-sizing:border-box;margin:0}
+body{background:#e9e9ec;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:#272b2d;min-width:1440px}
+a{color:inherit;text-decoration:none}
+img{display:block}
+button,input{font-family:inherit}
+
+/* Lienzo de cada página */
+.page{position:relative;width:1440px;height:1024px;margin:0 auto;overflow:hidden;background:#fff}
+.abs{position:absolute}
+.cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* Encabezado */
+.header{position:absolute;left:2px;top:-2px;width:1440px;display:flex;flex-direction:column;border-bottom:1px solid #42214b;z-index:5}
+.header__stripe{height:4px;background:#45234e}
+.header__bar{height:84px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 96px}
+.brand{display:flex;align-items:center;gap:18px}
+.brand img{width:124px;height:76px;object-fit:cover}
+.brand__sep{width:1px;height:26px;background:#d5d8d7}
+.brand__sub{font-size:13px;color:#63696c}
+.nav{display:flex;align-items:center;gap:8px}
+.nav a{display:flex;flex-direction:column;padding:10px 14px;font-size:14px;font-weight:500;color:#272b2d}
+.nav a.is-active{padding-bottom:4px;gap:2px;font-weight:600;color:#42214b}
+.nav a.is-active::after{content:"";height:2px;border-radius:2px;background:#42214b}
+.nav__space{width:6px}
+.nav a.btn-login{flex-direction:row;padding:0 22px;color:#fff;font-weight:600;font-size:15px}
+.btn-login{display:flex;align-items:center;justify-content:center;height:44px;padding:0 22px;border:1px solid #355b68;border-radius:6px;
+  background:#42214b;color:#fff;font-size:15px;font-weight:600;box-shadow:0 2px 4px rgba(53,91,104,.25);cursor:pointer}
+
+/* Pie de página morado */
+.footer-bg{position:absolute;left:0;top:853px;width:1458px;height:186px;background:#5f1a75}
+.footer{position:absolute;left:-1px;top:856px;width:1440px;height:144px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px}
+.footer__row{display:flex;align-items:center;justify-content:space-between}
+.footer__brand{display:flex;flex-direction:column;gap:8px}
+.footer__brand strong{font-size:28px;font-weight:800;letter-spacing:-.5px;color:#fff}
+.footer__brand span{font-size:13px;color:rgba(255,255,255,.72)}
+.footer__links{display:flex;gap:32px;font-size:14px;color:rgba(255,255,255,.85)}
+.footer__rule{height:1px;background:rgba(255,255,255,.2)}
+
+/* Texto utilitario */
+.t{position:absolute;white-space:nowrap}
+
+.footer__brand span,.footer__links span{white-space:nowrap}
+
+html{scroll-behavior:smooth}
+.page{margin:0 auto 32px}
+
+/* ===== Estilos de cada página (acotados con #pN) ===== */
+/* ---- Página 1 ---- */
+#p1{background:#5f1a75}
+#p1 .white-band{left:3px;top:594.89px;width:1440px;height:304.67px;background:#fff}
+#p1 .orange-band{left:0;top:935px;width:1440px;height:89px;background:#ff7b12}
+#p1 .hero-bg{left:0;top:82px;width:1442px;height:512.89px;overflow:hidden;background:linear-gradient(90deg,#ff6a00 0%,#ff6a00 20%,#e2492d 38%,#a8205f 62%,#6a1a74 82%,#5f1a75 100%)}
+#p1 .hero-bg img{position:absolute;left:.28%;top:-19.68%;width:99.72%;height:139.36%;max-width:none}
+#p1 .intro{position:absolute;left:79px;top:200px;width:686px;display:flex;flex-direction:column;gap:22px}
+#p1 .eyebrow{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:1.44px;color:#42214b}
+#p1 .eyebrow::before{content:"";width:28px;height:2px;background:#42214b}
+#p1 .intro h1{font-size:46px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#272b2d}
+#p1 .intro h1 span{color:#42214b}
+#p1 .intro p{width:560px;font-size:19px;line-height:1.55;color:#fff}
+#p1 .fields{display:flex;gap:38px;padding-top:8px}
+#p1 .field{height:48px;border-radius:6px;background:#5f1a75;color:#fff;font-size:20px;font-weight:600;text-align:center;padding:0 8px;outline:none}
+#p1 .field::placeholder{color:rgba(255,255,255,.5)}
+#p1 .field--user{width:148px;border:1px solid #355b68;box-shadow:0 2px 4px rgba(53,91,104,.25)}
+#p1 .field--pass{width:147px;border:1px solid #d5d8d7}
+#p1 .field:focus{border-color:#ae3cc9;box-shadow:0 0 0 3px rgba(174,60,201,.35)}
+#p1 .btn-enter{position:absolute;left:79px;top:435px;width:148px;height:48px;border:1px solid #355b68;border-radius:6px;background:#ae3cc9;
+    color:#fff;font-size:20px;font-weight:600;box-shadow:0 2px 4px rgba(53,91,104,.25);cursor:pointer}
+#p1 .help-link{position:absolute;top:499.5px;font-size:16px;line-height:1.55;color:#fff;white-space:nowrap}
+#p1 .hero-img{left:765px;top:172px;width:624px;height:348px;border:1px solid #000;border-radius:20px;overflow:hidden}
+#p1 .photo{top:630.56px;width:305.19px;height:198.37px;border-radius:20px;overflow:hidden;background:#d9d9d9}
+#p1 .photo--outlined{border:1px solid #000}
+#p1 .footer-1{position:absolute;left:0;top:880px;width:1440px;height:144px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px}
+
+/* ---- Página 2 ---- */
+#p2 .chart{left:242.5px;top:175px;width:1280px;height:453px}
+#p2 .chart svg{display:block;width:1280px;height:453px}
+#p2 .hours-card{left:45px;top:185px;width:1346px;height:369px;padding:32px;border-radius:14px;overflow:hidden;
+    background:rgba(216,187,120,.22);box-shadow:0 8px 24px rgba(39,43,45,.07);display:flex;flex-direction:column;gap:24px}
+#p2 .hours-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:#42214b}
+#p2 .hours-card h2{font-size:28px;font-weight:700;letter-spacing:-.4px;color:#272b2d;display:flex;flex-direction:column;gap:11px}
+#p2 .hours-card h2::after{content:"";width:44px;height:3px;border-radius:3px;background:#42214b}
+#p2 .hours-card .status{margin-top:6px;font-size:15px;color:#63696c;white-space:pre}
+#p2 .btn-detail{position:relative;width:152px;height:44px;border:1px solid #d5d8d7;border-radius:6px;background:#5f1a75;color:#f2f2f7;
+    font-size:15px;font-weight:600;cursor:pointer;display:block}
+#p2 .btn-detail span{position:absolute;left:22px;top:12px}
+#p2 .btn-detail svg{position:absolute;right:23px;top:50%;margin-top:-9px;width:18px;height:18px;fill:none;stroke:#f2f2f7;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#p2 .orange-top{left:0;top:0;width:1440px;height:166.51px;background:#ff7b12}
+#p2 .event{top:600.5px;width:256px;height:238px;background:rgba(216,187,120,.45)}
+#p2 .event__date{position:absolute;top:600.5px;width:255px;height:38px;background:#63696c}
+#p2 .event__date span,
+#p2 .event__title{position:absolute;white-space:nowrap;font-size:14px;font-weight:600}
+#p2 .event__date span{color:#f2f2f7;top:6px}
+#p2 .event__title{color:#000}
+#p2 .event-img{object-fit:cover}
+
+/* ---- Página 3 ---- */
+#p3 .band{left:-8px;top:85px;width:1448px;height:169px;background:#5f1a75}
+#p3 .page-title{position:absolute;left:29px;top:107px;font-size:96px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#fff;white-space:nowrap}
+#p3 .panel{background:#f7f2ed;border-radius:20px}
+#p3 .qbtn{position:absolute;width:541px;height:78px;border-radius:20px;background:#5f1a75;color:#fff;transition:background .18s,transform .18s}
+#p3 .qbtn:hover{background:#ae3cc9;transform:translateY(-2px)}
+#p3 .qbtn span{position:absolute;font-size:48px;font-weight:800;line-height:1.12;letter-spacing:-1px;white-space:nowrap}
+#p3 .btn-detail{position:absolute;left:1166px;top:141px;width:220px;height:74px;border:1px solid #d5d8d7;border-radius:20px;background:#ff5b06;
+    color:#f2f2f7;font-size:32px;font-weight:600;display:flex;align-items:center;justify-content:center;padding:0 35px 0 22px}
+#p3 .card-shadow{left:851px;top:666px;width:470px;height:262px;border-radius:20px;background:#5f1a75}
+#p3 .card-img{left:813px;top:640px;width:474px;height:265px;border:1px solid #000;border-radius:20px;overflow:hidden}
+#p3 .header__ph{width:300px;height:15px;background:#d9d9d9}
+#p3 .strip{position:absolute;left:0;width:1440px;overflow:hidden;display:flex;flex-direction:column;gap:32px}
+
+/* ---- Página 4 ---- */
+#p4 .orange-top{left:0;top:0;width:1440px;height:138px;background:#ff7b12}
+#p4 .board{left:76px;top:190px;width:1286px;height:568px;border:1px solid #000;background:rgba(255,123,18,.46)}
+#p4 .board-title{position:absolute;left:595px;top:202px;width:214px;height:45px;font-size:50px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#fff}
+#p4 .cell{position:absolute;width:174px;height:36px;background:rgba(95,26,117,.5)}
+#p4 .cell span{position:absolute;width:200px;height:45px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#fff;white-space:nowrap}
+#p4 .footer-4{position:absolute;left:0;top:880px;width:1440px;height:144px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px}
+
+/* ---- Página 5 ---- */
+#p5 .orange-top{left:0;top:0;width:1440px;height:150px;background:#ff7b12}
+#p5 .purple-bottom{left:0;top:894px;width:1440px;height:130px;background:#5f1a75}
+#p5 .page-title{position:absolute;left:39px;top:150px;width:1342px;font-size:80px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#000}
+#p5 .tile{width:380px;height:380px;background:#d9d9d9}
+#p5 .label-bar{height:76px;background:#1e1e1e}
+#p5 .label{position:absolute;height:74px;font-size:70px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#fff;white-space:nowrap}
+#p5 .photo{object-fit:cover}
+#p5 .list{position:absolute;top:770px;font-size:30px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#000;white-space:nowrap;list-style:none;padding:0}
+#p5 .footer-5{position:absolute;left:1px;top:874px;width:1440px;height:144px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px}
+
+/* ---- Página 6 ---- */
+#p6 .orange-top{left:47px;top:-15px;width:1440px;height:140px;background:#ff7b12}
+#p6 .title-card{left:55px;top:176px;width:522px;height:108px;border-radius:10px;background:rgba(255,123,18,.3)}
+#p6 .title-card h1{position:absolute;left:49px;top:26px;font-size:40px;font-weight:700;color:#000;white-space:nowrap}
+#p6 .faq-panel{left:47px;top:320px;width:1334px;height:530px;border-radius:25px;background:rgba(95,26,117,.5)}
+#p6 .q{position:absolute;left:127px;height:76px;border-radius:10px;background:#d9d9d9;list-style:none}
+#p6 .q span{position:absolute;left:24px;top:19px;font-size:35px;color:#000;white-space:nowrap}
+#p6 .q:hover{background:#ececec}
+#p6 .header__ph{width:300px;height:15px;background:#d9d9d9}
+#p6 .footer-6{position:absolute;left:0;top:880px;width:1440px;height:144px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px}
+
+/* ---- Página 7 ---- */
+#p7 .band-orange{left:0;top:84px;width:1440px;height:47.64px;background:#ff7b12}
+#p7 .band-purple{left:0;top:131.64px;width:1448px;height:169px;background:#5f1a75}
+#p7 .page-title{position:absolute;left:38px;top:162.14px;font-size:96px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#fff;white-space:nowrap}
+#p7 .btn-back{position:absolute;left:1181px;top:177.14px;width:220px;height:74px;border:1px solid #d5d8d7;border-radius:20px;background:#ff5b06;
+    color:#f2f2f7;font-size:32px;font-weight:600;display:flex;align-items:center;justify-content:center;padding:0 35px 0 22px}
+#p7 .doc-icon{position:absolute;left:553px;top:178px;width:64px;height:76px;fill:none;stroke:#fff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+#p7 .grades-panel{left:53.5px;top:315.82px;width:805px;height:580px;border-radius:25px;background:rgba(95,26,117,.5)}
+#p7 .grades-title{position:absolute;left:76px;top:345.14px;font-size:40px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#fff;white-space:nowrap}
+#p7 table{position:absolute;left:84px;top:407.14px;width:739px;border-collapse:collapse;table-layout:fixed;background:#fff}
+#p7 th,
+#p7 td{height:74px;border:1px solid #000;text-align:center;vertical-align:middle;font-weight:800;letter-spacing:-1px;line-height:1.12;padding:0}
+#p7 thead th{font-size:24px;color:#fff}
+#p7 .c-subject{background:#5f1a75}
+#p7 .c-c1,
+#p7 .c-c2{background:#ff7b12}
+#p7 .c-final{background:#ffb457}
+#p7 tbody td{font-size:24px;color:#5f1a75}
+#p7 tbody tr:nth-child(odd) td:not(.final){background:#e8cbf2}
+#p7 tbody tr:nth-child(even) td:not(.final){background:#fff}
+#p7 tbody td.final{background:#ffb457}
+#p7 td.subject{text-align:center}
+#p7 .student-card{left:954.62px;top:315.82px;width:400.49px;height:580px;border-radius:20px;background:#ff7b12}
+#p7 .avatar{left:999.18px;top:351.95px;width:305.19px;height:294.19px;border-radius:20px;overflow:hidden;background:#fff}
+#p7 .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2}
+#p7 .student-card-text{position:absolute;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#5f1a75;white-space:nowrap}
+#p7 .footer-7{position:absolute;left:0;top:911px;width:1464px;height:113px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px;overflow:hidden}
+#p7 .footer-7 .footer__row{height:3px;justify-content:flex-start;gap:606px}
+
+/* ---- Página 8 ---- */
+#p8 .orange-band{left:0;top:93.97px;width:1440px;height:51.9px;background:#ff7b12}
+#p8 .map-title-bar{left:287px;top:160px;width:865px;height:86px;background:#d9d9d9}
+#p8 .map-title{position:absolute;left:620px;top:181px;width:200px;font-size:50px;font-weight:600;color:#000;white-space:nowrap}
+#p8 .map-img{position:absolute;width:438px;height:458px;overflow:hidden}
+#p8 .map-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#p8 .map-img--crop img{inset:auto;left:-38.47%;top:15.72%;width:156.85%;height:100%;max-width:none}
+#p8 .label-bar{background:#1e1e1e;height:69px;width:434px}
+#p8 .label{position:absolute;font-size:50px;font-weight:600;color:#fff;white-space:nowrap}
+#p8 .footer-8{position:absolute;left:-24px;top:880px;width:1464px;height:144px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px}
+
+/* ---- Página 9 ---- */
+#p9 .brand-9{position:absolute;left:82px;top:12px}
+#p9 .nav-9{position:absolute;left:923px;top:28px}
+#p9 .band{left:-26.28px;top:101.19px;width:1466.28px;height:243.15px;background:#5f1a75}
+#p9 .tile{position:absolute;top:132px;width:266.68px;height:165px;border-radius:25px;background:#ff7b12;transition:transform .18s}
+#p9 .tile:hover{transform:translateY(-3px)}
+#p9 .tile-text{position:absolute;font-size:36px;color:#fff;white-space:nowrap;line-height:normal}
+#p9 .center{transform:translateX(-50%);text-align:center}
+#p9 .panel{position:absolute;top:367px;width:555px;height:488px;background:#f2f2f7;overflow:hidden}
+#p9 .panel .t{position:absolute;font-size:36px;line-height:normal;white-space:nowrap}
+#p9 .rule{position:absolute;height:1px;background:linear-gradient(90deg,rgba(95,26,117,.25),#5f1a75,rgba(95,26,117,.25))}
+#p9 .pill{position:absolute;left:50px;width:456px;height:41px;border:1px solid #000;border-radius:20px;background:#5f1a75}
+#p9 .pill-text{pointer-events:none;position:absolute;left:50%;transform:translateX(-50%);text-align:center;font-size:36px;line-height:normal;color:#fff;white-space:nowrap}
+#p9 .footer-9{position:absolute;left:0;top:880px;width:1440px;height:144px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px}
+
+/* ---- Página 10 ---- */
+#p10 .orange-strip{left:0;top:72px;width:1440px;height:45px;background:#ff7b12}
+#p10 .band{left:0;top:105.5px;width:1448px;height:169px;background:#5f1a75}
+#p10 .page-title{position:absolute;left:38px;top:136px;font-size:96px;font-weight:800;line-height:1.12;letter-spacing:-1px;color:#fff;white-space:nowrap}
+#p10 .btn-back{position:absolute;left:1175px;top:170px;width:220px;height:74px;border:1px solid #d5d8d7;border-radius:20px;background:#ff5b06;
+    color:#f2f2f7;font-size:32px;font-weight:600;display:flex;align-items:center;justify-content:center;padding:0 35px 0 22px}
+#p10 .card{position:absolute;width:305.19px;height:198.37px;border-radius:20px;transition:transform .18s}
+#p10 .card:hover{transform:translateY(-4px)}
+#p10 .c-orange{background:#ff7b12}
+#p10 .c-purple{background:#5f1a75}
+#p10 .c-pink{background:#fcc7d5}
+#p10 .c-lilac{background:#eec5fa}
+#p10 .card-text{position:absolute;font-size:36px;font-weight:800;line-height:normal;white-space:nowrap;pointer-events:none}
+#p10 .on-light{color:#5f1a75}
+#p10 .on-dark{color:#fff}
+#p10 .card-text p{line-height:normal}
+#p10 .ico{position:absolute;fill:none;stroke-width:.9;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+#p10 .footer-10{position:absolute;left:0;top:863px;width:1464px;height:246px;background:#5f1a75;display:flex;flex-direction:column;gap:32px;padding:56px 96px 28px}
+
+/* Ajuste automático al ancho de la ventana */
+body{min-width:0!important;overflow-x:hidden}
+.page{zoom:var(--s,1)}
+</style>
+<script>document.addEventListener('error',function(e){var t=e.target;if(t&&t.tagName==='IMG'){if(t.closest('.brand')){var s=document.createElement('strong');s.textContent='UNAB';s.style.cssText='font-size:30px;font-weight:800;color:#5f1a75;letter-spacing:-.5px';t.replaceWith(s)}else{t.style.visibility='hidden'}}},true);</script>
+</head>
+<body>
+<section class="page p1" id="p1" aria-label="Página 1">
+  <div class="abs white-band"></div>
+  <div class="abs orange-band"></div>
+
+  <div class="abs photo" style="left:582.45px"><img class="cover" alt="Estudiantes en actividad deportiva" src="https://www.figma.com/api/mcp/asset/9fd30724-15c8-44d3-ae10-4580f412b955.png"></div>
+  <div class="abs photo" style="left:1029px"><img class="cover" alt="Edificio del campus UNAB" src="https://www.figma.com/api/mcp/asset/fd9e3e73-c063-4eb5-b2c9-5006958fdc54.png"></div>
+  <div class="abs photo photo--outlined" style="left:135.91px"><img class="cover" alt="Grupo de estudiantes UNAB" src="https://www.figma.com/api/mcp/asset/79e5e631-73e5-4c61-998a-148d40b48fd5.png"></div>
+
+  <div class="abs hero-bg"><img alt="" src="https://www.figma.com/api/mcp/asset/2aa283e0-c504-4bd3-a282-49c471a0d2c5.png"></div>
+
+  <header class="header">
+    <div class="header__stripe"></div>
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/b077ca22-4fea-47ab-974b-f1c3503d0063.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <a class="is-active" href="#p1">Inicio</a>
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="intro">
+    <p class="eyebrow" style="width:auto;font-size:12px;line-height:normal;color:#42214b">PORTAL DEL ESTUDIANTE</p>
+    <h1>The New Portal U <span>Remaster</span></h1>
+    <p>Toda tu información universitaria, clara y en un solo lugar</p>
+    <form class="fields" onsubmit="return false">
+      <input class="field field--user" type="text" placeholder="Usuario" aria-label="Usuario" autocomplete="username">
+      <input class="field field--pass" type="password" placeholder="Contraseña" aria-label="Contraseña" autocomplete="current-password">
+    </form>
+  </section>
+
+  <button class="btn-enter" type="button">Ingresar</button>
+  <a class="help-link" style="left:79px" href="#">No tienes Usuario?</a>
+  <a class="help-link" style="left:265px" href="#">Se te olvido tu contraseña?</a>
+
+  <div class="abs hero-img"><img class="cover" alt="Edificio UNAB" src="https://www.figma.com/api/mcp/asset/582473c2-5b92-430b-bd35-d8235990a9a0.png"></div>
+  <footer class="footer-1">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+</section>
+
+<section class="page" id="p2" aria-label="Página 2">
+
+  <!-- Gráfica de línea (se dibuja con los datos de ejemplo) -->
+  <div class="abs chart">
+    <svg id="chart" viewBox="0 0 1280 453" role="img" aria-label="Horas libres obtenidas por mes, de enero a octubre"></svg>
+  </div>
+
+  <!-- Tarjeta de resumen -->
+  <section class="abs hours-card">
+    <div>
+      <h2>Tus horas libres</h2>
+      <p class="status">Llevas --- horas de  --- horas</p>
+    </div>
+    <a class="btn-detail" href="#"><span>Ver detalle</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </section>
+
+  <div class="abs orange-top"></div>
+
+  <header class="header">
+    <div class="header__stripe"></div>
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/00a2e757-daa5-41ff-9e85-ccab895e097b.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="footer-bg"></div>
+  <footer class="footer">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+
+  <!-- Actividades -->
+  <div class="abs event" style="left:133.5px"></div>
+  <div class="abs event" style="left:590.75px"></div>
+  <div class="abs event" style="left:1052.6px"></div>
+
+  <div class="event__date" style="left:134.5px"><span style="left:7px">el dia --- se realizara esta actividad</span></div>
+  <div class="event__date" style="left:591.75px"><span style="left:7px">el dia --- se realizara esta actividad</span></div>
+  <div class="event__date" style="left:1051.6px"><span style="left:9px">el dia --- se realizara esta actividad</span></div>
+
+  <p class="event__title" style="left:200.5px;top:662.5px">Taller Power Skills</p>
+  <p class="event__title" style="left:611.75px;top:662.5px">Concurso Destileria de Cerveza</p>
+  <p class="event__title" style="left:1068.9px;top:654.5px">Taller Practico Mantenimiento PCs</p>
+
+  <img class="abs event-img" style="left:145.5px;top:687.5px;width:239px;height:134px" alt="Taller Power Skills" src="https://www.figma.com/api/mcp/asset/88d291fd-8a85-418f-bf89-61a1d8faa6f5.png">
+  <img class="abs event-img" style="left:655.75px;top:694.5px;width:144px;height:144px" alt="Concurso Destilería de Cerveza" src="https://www.figma.com/api/mcp/asset/e7a0441e-b16a-4ac8-ad61-1624906aa03b.png">
+  <img class="abs event-img" style="left:1077.6px;top:687.5px;width:221px;height:146px" alt="Taller Práctico de Mantenimiento de PCs" src="https://www.figma.com/api/mcp/asset/c54fabbf-7f7a-44b7-958b-6e54327400cd.png">
+</section>
+
+<section class="page" id="p3" aria-label="Página 3">
+  <div class="abs card-shadow"></div>
+  <div class="abs panel" style="left:700px;top:282px;width:700px;height:330px"></div>
+  <div class="abs band"></div>
+  <h1 class="page-title">Acceso rápido</h1>
+  <div class="abs panel" style="left:29px;top:282px;width:596px;height:656px"></div>
+
+  <!-- Columna izquierda -->
+  <a class="qbtn" href="#" style="left:56px;top:306px"><span style="left:136px;top:9px">Cosmos</span></a>
+  <a class="qbtn" href="#" style="left:53px;top:396px"><span style="left:131px;top:11px">Biblioteca</span></a>
+  <a class="qbtn" href="#" style="left:53px;top:492px"><span style="left:155px;top:9px">Punto U</span></a>
+  <a class="qbtn" href="#" style="left:53px;top:588px"><span style="left:122px;top:14px">Unab Digital</span></a>
+  <a class="qbtn" href="#" style="left:53px;top:684px"><span style="left:122px;top:12px">Office 365</span></a>
+  <a class="qbtn" href="#p2" style="left:53px;top:789px"><span style="left:88px;top:12px">+ Horas libres</span></a>
+
+  <!-- Columna derecha -->
+  <a class="qbtn" href="#" style="left:789px;top:300px"><span style="left:29px;top:-4px">Tarifa y resoluciones</span></a>
+  <a class="qbtn" href="#" style="left:789px;top:396px"><span style="left:187px;top:12px">PQRSF</span></a>
+  <a class="qbtn" href="#" style="left:789px;top:492px"><span style="left:91px;top:10px">Comite de Genero</span></a>
+
+  <div class="abs card-img"><img class="cover" alt="Tarjeta Vibra+ Universidad UNAB" src="https://www.figma.com/api/mcp/asset/afa807b8-bf44-4d6c-97ef-99f0abb52b9c.png"></div>
+  <a class="btn-detail" href="#p2">Ver detalle</a>
+
+  <header class="header" style="left:0;top:-4px;width:1452px">
+    <div class="header__stripe"></div>
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/df3e731b-87ae-4c33-86cf-15c1bbabdc43.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <div class="header__ph"></div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Franja del pie de página -->
+  <footer class="strip" style="top:955px;height:69px;background:#ff8d28;padding:3px 96px 28px">
+    <div class="footer__row" style="height:66px">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+  </footer>
+</section>
+
+<section class="page" id="p4" aria-label="Página 4">
+  <div class="abs board"></div>
+  <h1 class="board-title">Horario</h1>
+  <div id="grid"></div>
+
+  <div class="abs orange-top"></div>
+  <header class="header" style="left:0;top:0;width:1440px">
+    <div class="header__stripe"></div>
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/67ce40af-9196-4387-b3b6-fc1a0675724e.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <footer class="footer-4">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+</section>
+
+<section class="page" id="p5" aria-label="Página 5">
+  <div class="abs orange-top"></div>
+  <div class="abs purple-bottom"></div>
+
+  <header class="header" style="left:0;top:0;border:0">
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/a7699f15-f252-4208-af25-76a43a740b9a.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="page-title">Lugares destacados para horas libres</h1>
+
+  <!-- Fondos de las tarjetas -->
+  <div class="abs tile" style="left:89px;top:330px"></div>
+  <div class="abs tile" style="left:530px;top:330px"></div>
+  <div class="abs tile" style="left:971px;top:332px"></div>
+
+  <!-- Rótulos -->
+  <div class="abs label-bar" style="left:91px;top:634px;width:378px"></div>
+  <div class="abs label-bar" style="left:532px;top:636px;width:378px"></div>
+  <div class="abs label-bar" style="left:972px;top:636px;width:378px"></div>
+  <p class="label" style="left:213px;top:635px;width:226px">CSU</p>
+  <p class="label" style="left:588px;top:637px;width:356px">JARDIN</p>
+  <p class="label" style="left:970px;top:634px;width:380px">ELBOSQUE</p>
+
+  <!-- Fotografías -->
+  <img class="abs photo" style="left:106px;top:375px;width:348px;height:228px" alt="CSU" src="https://www.figma.com/api/mcp/asset/e4ce2eff-37a0-426d-8630-6437f4dbaa77.png">
+  <img class="abs photo" style="left:530px;top:386px;width:357px;height:232px" alt="" src="https://www.figma.com/api/mcp/asset/4ccaab8b-be89-44a1-8300-75c1394d6bc3.png">
+  <img class="abs photo" style="left:542px;top:375px;width:357px;height:232px" alt="Jardín" src="https://www.figma.com/api/mcp/asset/4ccaab8b-be89-44a1-8300-75c1394d6bc3.png">
+  <img class="abs photo" style="left:982px;top:375px;width:353px;height:235px" alt="El Bosque" src="https://www.figma.com/api/mcp/asset/3cee253d-e4f9-44f3-8a52-4897574410be.png">
+
+  <!-- Espacios de cada sede -->
+  <ul class="list" style="left:155px"><li>-Gimnasio</li><li>-Cancha futsal</li><li>-Coliseo</li></ul>
+  <ul class="list" style="left:567px"><li>-Auditorio Mayor</li><li>-Plaza Banu</li><li>-Auditorio Ingenierias</li></ul>
+  <ul class="list" style="left:995px"><li>-Cafeteria</li><li>-Cancha</li><li>-Biblioteca</li></ul>
+
+  <footer class="footer-5">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+</section>
+
+<section class="page" id="p6" aria-label="Página 6">
+  <div class="abs orange-top"></div>
+
+  <footer class="footer-6">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+
+  <header class="header" style="left:0;top:0;width:1452px">
+    <div class="header__stripe"></div>
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/8e9d07bf-d631-4a2a-94d3-976cf293d723.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <div class="header__ph"></div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="abs title-card"><h1>Preguntas Frecuentes</h1></div>
+  <div class="abs faq-panel"></div>
+
+  <ul>
+    <li class="q" style="top:349px;width:732px"><span>¿Qué cambios tiene el nuevo Portal U?</span></li>
+    <li class="q" style="top:454px;width:960px"><span>¿Dónde puedo revisar las materias que tengo inscritas?</span></li>
+    <li class="q" style="top:570px;width:1108px"><span>¿Cómo puedo encontrar rápidamente los servicios que necesito?</span></li>
+    <li class="q" style="top:696px;width:974px"><span>¿Dónde puedo reportar un error o problema técnico?</span></li>
+  </ul>
+</section>
+
+<section class="page" id="p7" aria-label="Página 7">
+  <div class="abs student-card"></div>
+
+  <footer class="footer-7">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+
+  <header class="header" style="left:0;top:0;border:0">
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/2b6901a9-8af0-4fb8-bb65-83e63e5f3385.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="abs band-orange"></div>
+  <div class="abs band-purple"></div>
+  <h1 class="page-title">Mis Notas</h1>
+  <a class="btn-back" href="#p3">Atras</a>
+  <svg class="doc-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+
+  <div class="abs grades-panel"></div>
+  <h2 class="grades-title">Semestre actual</h2>
+
+  <table>
+    <colgroup><col style="width:178px"><col style="width:189px"><col style="width:180px"><col style="width:192px"></colgroup>
+    <thead>
+      <tr><th class="c-subject">Materia</th><th class="c-c1">Corte 1</th><th class="c-c2">Corte 2</th><th class="c-final">Definitiva</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="subject">Calculo</td><td>4.1</td><td>3.1</td><td class="final">3.6</td></tr>
+      <tr><td class="subject">Mecanica</td><td>3.4</td><td>3.4</td><td class="final">3.4</td></tr>
+      <tr><td class="subject" style="font-size:22px">Programacion</td><td>4.3</td><td>4.4</td><td class="final">4.3</td></tr>
+      <tr><td class="subject" style="font-size:20px">Diseño de<br>interfases</td><td>4.6</td><td>3.2</td><td class="final">3.9</td></tr>
+      <tr><td class="subject" style="font-size:22px">Ingles</td><td>3.6</td><td>3.1</td><td class="final">3.3</td></tr>
+    </tbody>
+  </table>
+
+  <div class="abs avatar"><img alt="Foto del estudiante" src="https://www.figma.com/api/mcp/asset/d304b753-c2ce-425b-b811-d54196153b9a.png"></div>
+  <p class="student-card-text" style="left:988.36px;top:678.14px;font-size:32px">Nombre del estudiante</p>
+  <p class="student-card-text" style="left:987.73px;top:726.64px;font-size:24px">Curso: Ingeneria de Sistemas</p>
+  <p class="student-card-text" style="left:987.73px;top:805.64px;font-size:36px">Promedio: 3.72</p>
+</section>
+
+<section class="page" id="p8" aria-label="Página 8">
+  <footer class="footer-8">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+
+  <header class="header" style="left:0;top:0;border:0">
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/2b5abb43-7131-4f05-b00b-2812a6cf92e4.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="abs orange-band"></div>
+
+  <div class="map-img" style="left:20px;top:283px"><img alt="Mapa de la sede El Bosque" src="https://www.figma.com/api/mcp/asset/03fcb382-23a2-49ff-843f-44c5c25fd779.png"></div>
+  <div class="map-img" style="left:501px;top:284px"><img alt="Mapa del campus CSU" src="https://www.figma.com/api/mcp/asset/59e52834-d5d5-4cba-842d-16b1ce9c28f9.png"></div>
+  <div class="map-img map-img--crop" style="left:981px;top:283px"><img alt="Mapa de la sede El Jardín" src="https://www.figma.com/api/mcp/asset/bab263e5-4193-486c-91ef-381fa32b7e6f.png"></div>
+
+  <div class="abs map-title-bar"></div>
+  <h1 class="map-title">El Mapa</h1>
+
+  <div class="abs label-bar" style="left:20px;top:284px"></div>
+  <div class="abs label-bar" style="left:501px;top:284px"></div>
+  <div class="abs label-bar" style="left:984px;top:283px"></div>
+  <p class="label" style="left:120px;top:291px">El Bosque</p>
+  <p class="label" style="left:670px;top:292px">Csu</p>
+  <p class="label" style="left:1098px;top:292px">El Jardin</p>
+</section>
+
+<section class="page" id="p9" aria-label="Página 9">
+  <div class="brand brand-9">
+    <img src="https://www.figma.com/api/mcp/asset/bf8113ae-bf70-4d0f-8c9a-553b3cc78a0f.png" alt="UNAB">
+    <span class="brand__sep"></span>
+    <span class="brand__sub">Portal universitario</span>
+  </div>
+  <nav class="nav nav-9" aria-label="Principal">
+    <a href="#p2">Horas libres</a>
+    <a href="#">Lugares y campus</a>
+    <a href="#">Ayuda</a>
+    <span class="nav__space"></span>
+    <a class="btn-login" href="#p1">inicio</a>
+  </nav>
+
+  <div class="abs band"></div>
+
+  <!-- Menú superior -->
+  <a class="tile" href="#" style="left:13px"></a>
+  <a class="tile" href="#" style="left:300px"></a>
+  <a class="tile" href="#" style="left:587px"></a>
+  <a class="tile" href="#" style="left:874px"></a>
+  <a class="tile" href="#" style="left:1161px"></a>
+  <p class="tile-text" style="left:68px;top:197px">Tramites</p>
+  <p class="tile-text" style="left:320px;top:193px">Investigacion</p>
+  <p class="tile-text center" style="left:50%;top:171px;width:192px;white-space:normal">Apoyo academico</p>
+  <p class="tile-text" style="left:929.16px;top:171px;width:203.68px;white-space:normal">Menu de secciones</p>
+  <p class="tile-text center" style="left:1298.5px;top:171px;width:183px;white-space:pre-wrap">Elecciones         Unab</p>
+
+  <!-- Últimas noticias -->
+  <section class="panel" style="left:66px">
+    <p class="t center" style="left:calc(50% + .5px);top:37px;width:340px;text-align:center;color:#000">ULTIMAS NOTICIAS</p>
+    <div class="rule" style="left:54px;top:91px;width:456px"></div>
+    <div class="rule" style="left:50px;top:462px;width:456px"></div>
+    <img class="abs" style="left:38px;top:116px;width:480px;height:322px;object-fit:cover" alt="Noticias recientes de la UNAB" src="https://www.figma.com/api/mcp/asset/d2cc39f0-2a33-48b1-8e4a-2f23038c4efa.png">
+  </section>
+
+  <!-- Accesos -->
+  <section class="panel" style="left:798px">
+    <img class="abs" style="left:111px;top:17px;width:334px;height:206px;object-fit:cover" alt="UNAB Vigilada MinEducación" src="https://www.figma.com/api/mcp/asset/bf8113ae-bf70-4d0f-8c9a-553b3cc78a0f.png">
+    <div class="rule" style="left:50px;top:243.5px;width:456px"></div>
+    <div class="rule" style="left:49.5px;top:462.5px;width:456px"></div>
+    <a class="pill" href="#p3" style="top:266px"></a>
+    <a class="pill" href="#" style="top:336px"></a>
+    <a class="pill" href="#" style="top:406px"></a>
+    <p class="pill-text" style="top:266px;width:305px">ACCESO RAPIDO</p>
+    <p class="pill-text" style="top:336px;width:305px">SEMILLEROS</p>
+    <p class="pill-text" style="top:406px;width:363px">SERVICIO TECNICO</p>
+  </section>
+
+  <footer class="footer-9">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+</section>
+
+<section class="page" id="p10" aria-label="Página 10">
+  <footer class="footer-10">
+    <div class="footer__row">
+      <div class="footer__brand"><strong>UNAB</strong><span>Portal universitario · Información para estudiantes</span></div>
+      <nav class="footer__links" aria-label="Pie de página"><span>Inicio</span><span>Lugares y campus</span><span>Preguntas frecuentes</span></nav>
+    </div>
+    <div class="footer__rule"></div>
+  </footer>
+
+    <div class="abs orange-strip" style="z-index:0"></div>
+  <header class="header" style="left:12px;top:0;border:0;z-index:6">
+    <div class="header__bar">
+      <div class="brand">
+        <img src="https://www.figma.com/api/mcp/asset/4fe8b83b-dcd0-450d-bb21-a26af6b48dc2.png" alt="UNAB">
+        <span class="brand__sep"></span>
+        <span class="brand__sub">Portal universitario</span>
+      </div>
+      <nav class="nav" aria-label="Principal">
+        <a href="#p2">Horas libres</a>
+        <a href="#">Lugares y campus</a>
+        <a href="#">Ayuda</a>
+        <span class="nav__space"></span>
+        <a class="btn-login" href="#p1">inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="abs band"></div>
+  <h1 class="page-title">Menu de secciones</h1>
+  <a class="btn-back" href="#p9">Atras</a>
+
+  <!-- Fila 1 -->
+  <a class="card c-orange" href="#p3" style="left:79.41px;top:326.5px"></a>
+  <a class="card c-purple" href="#p2" style="left:425.89px;top:326.5px"></a>
+  <a class="card c-pink" href="#p4" style="left:765.15px;top:326.5px"></a>
+  <a class="card c-lilac" href="#p5" style="left:1104.41px;top:326.5px"></a>
+  <!-- Fila 2 -->
+  <a class="card c-purple" href="#" style="left:79.41px;top:561.73px"></a>
+  <a class="card c-orange" href="#p7" style="left:425.89px;top:561.73px"></a>
+  <a class="card c-lilac" href="#" style="left:766.81px;top:561.73px"></a>
+  <a class="card c-pink" href="#p6" style="left:1104.41px;top:561.73px"></a>
+
+  <!-- Textos -->
+  <p class="card-text on-light" style="left:103.5px;top:368.9px">Acceso rápido</p>
+  <p class="card-text on-dark" style="left:459.41px;top:368.9px">Horas Libres</p>
+  <p class="card-text on-light" style="left:851.24px;top:368.9px">Horario</p>
+  <div class="card-text on-light" style="left:1171px;top:381px;width:210px"><p>Lugares</p><p>destacados</p></div>
+  <p class="card-text on-dark" style="left:83.49px;top:602.23px">Ultimas Noticias</p>
+  <p class="card-text on-light" style="left:458px;top:602.23px">Tabla de Notas</p>
+  <div class="card-text on-light" style="left:811.95px;top:620.95px"><p>Apoyo</p><p>Academico</p></div>
+  <div class="card-text on-light" style="left:1171px;top:586.56px"><p>Preguntas</p><p>frecuentes</p></div>
+
+  <!-- Iconos (Lucide) -->
+  <svg class="ico" viewBox="0 0 24 24" style="left:199px;top:420px;width:62px;height:76px;stroke:#5f1a75" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+  <svg class="ico" viewBox="0 0 24 24" style="left:536px;top:425px;width:74px;height:69px;stroke:#fff" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+  <svg class="ico" viewBox="0 0 24 24" style="left:877px;top:419px;width:91px;height:82px;stroke:#5f1a75" aria-hidden="true"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+  <svg class="ico" viewBox="0 0 24 24" style="left:1300px;top:345px;width:83px;height:78px;stroke:#5f1a75" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+  <svg class="ico" viewBox="0 0 24 24" style="left:186px;top:651px;width:73px;height:81px;stroke:#fff" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M10 9H8M16 13H8M16 17H8"/></svg>
+  <svg class="ico" viewBox="0 0 24 24" style="left:529px;top:649px;width:85px;height:80px;stroke:#5f1a75" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8M16 13H8M16 17H8"/></svg>
+  <svg class="ico" viewBox="0 0 24 24" style="left:939px;top:590px;width:100px;height:94px;stroke:#5f1a75" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+  <svg class="ico" viewBox="0 0 24 24" style="left:1235px;top:675px;width:76px;height:72px;stroke:#1e1e1e" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+</section>
+
+<script>
+/* Página 2 */
+(function(){
+  // Datos de ejemplo: horas por mes (editar aquí)
+  var months=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct'];
+  var hours=[4,6,9,7,11,8,3,7,10,12];
+  var UP='#42214b',DOWN='#c2410c',BASE='#9a8aa1',INK='#272b2d',MUTED='#63696c',LINE='#d5d8d7';
+  var NS='http://www.w3.org/2000/svg',svg=document.getElementById('chart');
+  function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!==undefined)e.textContent=t;svg.appendChild(e);return e;}
+  var X0=103.6,STEP=111.2,Y0=316,K=17;               // posición del primer mes, separación, eje 0 y px por hora
+  function X(i){return X0+STEP*i;} function Y(v){return Y0-K*v;}
+
+  [0,4,8,12,16].forEach(function(v){
+    el('line',{x1:48,x2:1160,y1:Y(v),y2:Y(v),stroke:LINE,'stroke-width':1,'stroke-dasharray':v?'4 4':'0'});
+    el('text',{x:36,y:Y(v),'text-anchor':'end','dominant-baseline':'central','font-size':12,fill:MUTED},v);
+  });
+  el('text',{x:36,y:19,'text-anchor':'end','dominant-baseline':'central','font-size':12,'font-weight':600,fill:MUTED},'Horas');
+
+  for(var i=1;i<hours.length;i++){
+    el('line',{x1:X(i-1),y1:Y(hours[i-1]),x2:X(i),y2:Y(hours[i]),stroke:hours[i]>=hours[i-1]?UP:DOWN,'stroke-width':4,'stroke-linecap':'round'});
+  }
+  hours.forEach(function(h,i){
+    var d=i?h-hours[i-1]:null, col=d===null?BASE:(d>=0?UP:DOWN);
+    el('circle',{cx:X(i),cy:Y(h),r:8,fill:'#fff',stroke:col,'stroke-width':4});
+    el('text',{x:X(i),y:Y(h)-29,'text-anchor':'middle','dominant-baseline':'central','font-size':14,'font-weight':700,fill:INK},h);
+    el('text',{x:X(i),y:340.5,'text-anchor':'middle','dominant-baseline':'central','font-size':13,'font-weight':500,fill:INK},months[i]);
+    if(d===null){el('text',{x:X(i),y:363.5,'text-anchor':'middle','dominant-baseline':'central','font-size':12,'font-weight':700,fill:MUTED},'—');}
+    else{
+      var cx=X(i)-13;
+      el('polygon',{points:d>=0?(cx+4)+',360 '+(cx+8)+',367 '+cx+',367':cx+',360 '+(cx+8)+',360 '+(cx+4)+',367',fill:col});
+      el('text',{x:cx+12,y:363.5,'dominant-baseline':'central','font-size':12,'font-weight':700,fill:col},(d>=0?'+':'−')+Math.abs(d));
+    }
+  });
+})();
+
+/* Página 4 */
+(function(){
+  // Cuadrícula del horario: 6 columnas × 8 filas
+  var cols=[108,308,508,706,910,1118];
+  var rows=[258,308,358,408,484,534,584,634];
+  // Materias: [columna, fila, texto, tamaño, desplazamiento x, desplazamiento y]
+  var items=[
+    [2,2,'Laboratorio',25,4,5],[2,3,'Laboratorio',25,4,5],
+    [4,2,'Catedra',25,2,5],[4,3,'Catedra',25,2,5],
+    [3,0,'Calculo',25,4,5],[3,1,'Calculo',25,6,5],
+    [4,4,'Calculo',25,10,5],[4,5,'Calculo',25,10,5],
+    [1,2,'Mecanica',25,8,5],[1,3,'Mecanica',25,8,3],[3,3,'Mecanica',25,14,5],[3,2,'Mecanica',25,14,5],
+    [3,4,'Programacion',25,4,3],[1,1,'Programacion',25,8,0],[3,5,'Programacion',25,6,3],
+    [0,2,'Tenis',30,28,0],[0,3,'Tenis',30,28,0],[0,4,'Tenis',30,28,0],
+    [2,5,'Diseño',30,11,3],[2,6,'Diseño',30,11,-2]
+  ];
+  var map={};
+  items.forEach(function(it){map[it[0]+','+it[1]]=it;});
+  var grid=document.getElementById('grid'),html='';
+  rows.forEach(function(top,r){
+    cols.forEach(function(left,c){
+      var it=map[c+','+r],inner='';
+      if(it) inner='<span style="font-size:'+it[3]+'px;left:'+it[4]+'px;top:'+it[5]+'px">'+it[2]+'</span>';
+      html+='<div class="cell" style="left:'+left+'px;top:'+top+'px">'+inner+'</div>';
+    });
+  });
+  grid.innerHTML=html;
+})();
+</script>
+<script>(function(){function f(){document.documentElement.style.setProperty('--s',Math.min(1,document.documentElement.clientWidth/1440))}f();addEventListener('resize',f)})();</script>
+</body>
+</html>
