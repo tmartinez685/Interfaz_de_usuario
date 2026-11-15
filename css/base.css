@@ -1,0 +1,84 @@
+/* Portal UNAB · base: tokens, reset y tipografía.
+   Diseño de referencia: escritorio 1440 × 1024. Las medidas fluidas usan vw
+   para coincidir exactamente a 1440px y reducirse en pantallas menores. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --purple: #5f1a75;
+  --purple-900: #42214b;
+  --magenta: #ae3cc9;
+  --orange: #ff7b12;
+  --orange-deep: #ff5b06;
+  --sand: #ffb457;
+  --pink: #fcc7d5;
+  --lilac: #eec5fa;
+  --lilac-soft: #e8cbf2;
+  --cream: #f7f2ed;
+  --lavender: #f2f2f7;
+  --grey: #d9d9d9;
+  --dark: #1e1e1e;
+  --ink: #272b2d;
+  --muted: #63696c;
+  --line: #d5d8d7;
+  --teal-line: #355b68;
+  --danger: #c2410c;
+
+  --gutter: clamp(16px, 6.67vw, 96px);
+  --radius: 20px;
+  --shadow-btn: 0 2px 4px rgba(53, 91, 104, .25);
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+main { flex: 1 0 auto; }
+
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+ul { list-style: none; padding: 0; }
+
+:focus-visible {
+  outline: 3px solid var(--magenta);
+  outline-offset: 2px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: 8px; top: -60px; z-index: 100;
+  background: var(--purple-900); color: #fff; padding: 10px 16px; border-radius: 6px;
+}
+.skip-link:focus { top: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

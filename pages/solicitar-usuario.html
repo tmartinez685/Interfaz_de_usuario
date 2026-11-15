@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitar usuario · Portal UNAB</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/pages.css">
+<script src="../js/data.js"></script>
+<script src="../js/auth.js"></script>
+</head>
+<body data-root="../" data-active="">
+<div id="site-header"></div>
+
+<main id="contenido">
+  <div class="strip-orange" style="--h:44px"></div>
+  <section class="title-band">
+    <div class="wrap">
+      <h1 class="page-title" style="font-size:clamp(30px,5vw,72px)">Solicitar usuario</h1>
+      <a class="btn-back" href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Atrás</a>
+    </div>
+  </section>
+
+  <div class="wrap content">
+    <section class="form-panel panel-cream" aria-labelledby="h1">
+      <h2 id="h1" class="sr-only">Formulario de solicitud</h2>
+      <p class="intro-text">Si aún no tienes acceso al portal, completa tus datos y el equipo de admisiones te contactará a tu correo institucional.</p>
+      <form class="form" id="form-solicitar" novalidate>
+        <label>Nombre completo
+          <input id="sol-nombre" name="nombre" type="text" autocomplete="name" required>
+        </label>
+        <label>Documento de identidad
+          <input id="sol-doc" name="documento" type="text" inputmode="numeric" required>
+        </label>
+        <label>Correo institucional
+          <input id="sol-correo" name="correo" type="email" autocomplete="email" placeholder="nombre@unab.edu.co" required>
+        </label>
+        <label>Programa
+          <select id="sol-programa" name="programa" required>
+            <option value="">Selecciona un programa</option>
+            <option>Ingeniería de Sistemas</option>
+            <option>Ingeniería Industrial</option>
+            <option>Administración de Empresas</option>
+            <option>Derecho</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <button class="btn-primary" type="submit">Enviar solicitud</button>
+        <p class="form-msg" id="sol-msg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="../js/layout.js"></script>
+<script src="../js/forms.js"></script>
+</body>
+</html>

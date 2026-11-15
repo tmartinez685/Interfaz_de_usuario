@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicio · Portal UNAB</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/pages.css">
+<script src="../js/data.js"></script>
+<script src="../js/auth.js" data-guard data-root="../"></script>
+</head>
+<body data-root="../" data-active="inicio">
+<div id="site-header"></div>
+
+<main id="contenido">
+  <h1 class="sr-only">Portal del estudiante UNAB</h1>
+  <section class="dash-band" aria-label="Menú superior">
+    <nav class="tiles wrap" style="max-width:1440px">
+      <a class="tile" href="tramites.html">Trámites</a>
+      <a class="tile" href="investigacion.html">Investigación</a>
+      <a class="tile" href="apoyo-academico.html">Apoyo académico</a>
+      <a class="tile" href="menu.html">Menú de secciones</a>
+      <a class="tile" href="noticias.html#elecciones">Elecciones Unab</a>
+    </nav>
+  </section>
+
+  <div class="dash-panels wrap" style="max-width:1440px">
+    <section class="dash-panel dash-panel--news" aria-labelledby="h-noticias">
+      <h2 id="h-noticias">ÚLTIMAS NOTICIAS</h2>
+      <div class="rule"></div>
+      <a class="news-link" href="noticias.html"><img src="../assets/img/noticias.png" alt="Noticias recientes de la UNAB"></a>
+      <div class="rule"></div>
+    </section>
+
+    <section class="dash-panel dash-panel--links" aria-label="Accesos">
+      <img class="vigilada" src="../assets/img/vigilada.png" alt="UNAB Vigilada MinEducación">
+      <div class="rule"></div>
+      <div class="pills">
+        <a class="pill" href="acceso-rapido.html">ACCESO RÁPIDO</a>
+        <a class="pill" href="investigacion.html#semilleros">SEMILLEROS</a>
+        <a class="pill" href="apoyo-academico.html#servicio-tecnico">SERVICIO TÉCNICO</a>
+      </div>
+      <div class="rule"></div>
+    </section>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="../js/layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* GitHub Pages sirve este archivo en cualquier ruta inexistente: fijamos la base para que CSS/JS/enlaces carguen. */
+(function () {
+  var seg = location.pathname.split('/')[1];
+  var base = /\.github\.io$/.test(location.hostname) && seg ? '/' + seg + '/' : '/';
+  document.write('<base href="' + base + '">');
+})();
+</script>
+<title>Página no encontrada · Portal UNAB</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/pages.css">
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+</head>
+<body data-root="" data-active="">
+<div id="site-header"></div>
+
+<main id="contenido">
+  <div class="strip-orange" style="--h:44px"></div>
+  <section class="notfound">
+    <strong>404</strong>
+    <h1>Esta página no existe</h1>
+    <p>El enlace que seguiste no está disponible o fue movido.</p>
+    <a class="btn-primary" id="volver" href="index.html">Volver al inicio</a>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/layout.js"></script>
+<script>if (Auth.isLoggedIn()) document.getElementById('volver').href = 'pages/inicio.html';</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El mapa · Portal UNAB</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/pages.css">
+<script src="../js/data.js"></script>
+<script src="../js/auth.js" data-guard data-root="../"></script>
+</head>
+<body data-root="../" data-active="lugares">
+<div id="site-header"></div>
+
+<main id="contenido">
+  <div class="strip-orange" style="--h:52px"></div>
+  <div class="map-title-bar"><h1>El Mapa</h1></div>
+
+  <div class="maps">
+    <button class="map" type="button" data-img="../assets/img/mapa-bosque.png" data-alt="Mapa de la sede El Bosque">
+      <img src="../assets/img/mapa-bosque.png" alt="Mapa de la sede El Bosque" loading="lazy">
+      <span class="map__label">El Bosque</span>
+    </button>
+    <button class="map" type="button" data-img="../assets/img/mapa-csu.png" data-alt="Mapa del campus CSU">
+      <img src="../assets/img/mapa-csu.png" alt="Mapa del campus CSU" loading="lazy">
+      <span class="map__label">Csu</span>
+    </button>
+    <button class="map map--crop" type="button" data-img="../assets/img/mapa-jardin.png" data-alt="Mapa de la sede El Jardín">
+      <img src="../assets/img/mapa-jardin.png" alt="Mapa de la sede El Jardín" loading="lazy">
+      <span class="map__label">El Jardin</span>
+    </button>
+  </div>
+  <p class="maps-hint">Haz clic en un mapa para verlo completo.</p>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Mapa ampliado">
+    <button type="button" id="lightbox-cerrar" aria-label="Cerrar">&times;</button>
+    <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="../js/layout.js"></script>
+<script src="../js/mapa.js"></script>
+</body>
+</html>

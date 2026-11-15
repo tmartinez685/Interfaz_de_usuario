@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi perfil · Portal UNAB</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/pages.css">
+<script src="../js/data.js"></script>
+<script src="../js/auth.js" data-guard data-root="../"></script>
+</head>
+<body data-root="../" data-active="perfil">
+<div id="site-header"></div>
+
+<main id="contenido">
+  <div class="strip-orange" style="--h:44px"></div>
+  <section class="title-band">
+    <div class="wrap">
+      <h1 class="page-title">Mi perfil</h1>
+      <a class="btn-back" href="inicio.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Atrás</a>
+    </div>
+  </section>
+
+  <div class="wrap grades gutter-wide">
+    <section class="grades__panel panel-purple" aria-labelledby="h-datos">
+      <h2 id="h-datos">Datos del estudiante</h2>
+      <dl class="profile-list" id="perfil-lista"></dl>
+    </section>
+
+    <aside class="student-card" aria-label="Resumen">
+      <div class="student-card__avatar"><img src="../assets/img/avatar.png" alt="Foto del estudiante"></div>
+      <p class="name" id="est-nombre"></p>
+      <p class="course" id="est-curso"></p>
+      <p class="meta" id="est-id"></p>
+      <p class="meta" id="est-semestre"></p>
+      <p class="avg" id="est-promedio"></p>
+    </aside>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="../js/layout.js"></script>
+<script src="../js/notas.js"></script>
+</body>
+</html>
