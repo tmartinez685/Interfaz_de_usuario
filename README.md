@@ -18,3 +18,6 @@ Perfil: ID `U00372915` (U00 + 6 dígitos distintos), semestre 5, correo `estudia
 - `css/`: `base` (tokens), `layout` (header/footer/bandas), `pages` (por pantalla)
 - `js/data.js`: todos los datos de ejemplo (notas, horario, horas, FAQ, noticias…) · `auth.js`, `layout.js` y un script por pantalla
 - `assets/img/`: imágenes locales · `portal-completo (1).html`: exportación original de Figma (solo referencia)
+
+## En línea
+https://juandy36.github.io/Interfaz_de_usuario/ (GitHub Pages, rama `main`, raíz).
