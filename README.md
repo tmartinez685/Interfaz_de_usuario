@@ -20,4 +20,4 @@ Perfil: ID `U00372915` (U00 + 6 dígitos distintos), semestre 5, correo `estudia
 - `assets/img/`: imágenes locales · `portal-completo (1).html`: exportación original de Figma (solo referencia)
 
 ## En línea
-https://juandy36.github.io/Interfaz_de_usuario/ (GitHub Pages, rama `main`, raíz).
+https://tmartinez685.github.io/Interfaz_de_usuario/ (GitHub Pages, rama `main`, raíz).
